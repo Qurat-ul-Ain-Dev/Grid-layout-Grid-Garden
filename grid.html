@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+    .container{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: 100px 100px 100px 100px 100px ;
+    grid-gap: 30px;  
+}
+.item{
+    background-color: tomato;
+    color: aliceblue;
+    border: 5px solid black;
+    border-radius: 5px ;
+    
+}
+#item-2 {
+    grid-column-start: 2 ;
+    grid-column-end: 4;
+}
+#item-3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1 ;
+    grid-column-end: 3;
+}
+#item-4{
+    grid-row-start: 2 ;
+    grid-row-end: 4;
+}
+#item-5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4 ;
+    grid-row-end: 5;
+    background-color: tomato;
+    color: aliceblue;
+    border: 5px solid black;
+    border-radius: 5px ;
+}
+.item-item-5-container{
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: 80px 100px 100px 100px 100px ;
+    grid-gap: 30px;
+    
+}
+.nested-item{
+    background-color: aqua;
+    color: black;
+    border: 2px solid black;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 1;
+}
+#item-6{
+    grid-column-start: 1 ;
+    grid-column-end: 4;
+}
+    
+   
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="item" id="item-1">LOGO</div>
+            <div class="item" id="item-2">MENU</div>
+            <div class="item" id="item-3">MAIN</div>
+            <div class="item" id="item-4">ASIDE</div>
+            <div class="item-item-5-container" id="item-5">
+
+                <div class="nested-item" id="nested-item-1">spons 1</div>
+                <div class="nested-item" id="nested-item-2">spons 2</div>
+                <div class="nested-item" id="nested-item-3">spons 3</div>
+                <div class="nested-item" id="nested-item-4">spons 4</div>
+                <div class="nested-item" id="nested-item-5">spons 5</div>
+            </div>
+            <div class="item" id="item-6">FOOTER</div>
+
+        </div>
+    </section>
+    
+</body>
+</html>
